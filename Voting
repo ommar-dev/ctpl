@@ -1,0 +1,43 @@
+import java.util.Scanner;
+class VottingSystem{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a=0,b=0,c=0,vote;
+
+        for(int i=1;i<=10;i++){
+            System.out.print("Enter a vote as your choice as(1-A,2-B,3-C): ");
+            vote=sc.nextInt();
+
+            if(vote==1){
+                a++;
+            }
+            else if(vote==2){
+                b++;
+            }
+            else if(vote==3){
+                c++;
+            }
+            else{
+                System.out.println("Invalid vote");
+            }
+        }
+        System.out.println("Votting Result");
+        System.out.println("Total votes for A: "+a);
+        System.out.println("Total votes for B: "+b);
+        System.out.println("Total votes for c: "+c);
+
+        if(a>b && a>c){
+            System.out.println("A is winner");
+        }
+        else if(b>a && b>c){
+            System.out.println("B is winner");
+        }
+        else if(c>a &&c>b){
+            System.out.println("C is winner");
+        }
+        else{
+            System.out.println("It is Tie!");
+        }
+
+    }
+}
