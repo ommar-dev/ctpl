@@ -1,0 +1,45 @@
+quiz_questions=[
+    {
+        "question": "what is the sum of 3+2: ",
+        "options" : ["A.2","B.4","C.5","D.6"],
+        "answer" : 'C'
+    },
+    {
+        "question" : "find 6*3= ",
+        "options" : ["A.6","B.12","C.18","d.24"],
+        "answer" : 'C'
+    },
+    {
+        "question" : "Find square of 5: ",
+        "options" : ["A.20","B.25","C.15","D.5"],
+        "answer" : 'B'
+    },
+    {
+        "question" : " Find square root of 9: ",
+        "options" : ["A.3","b.2","c.4","d.1"],
+        "answer" : 'A'
+    },
+    {
+        "question" : "Solve 15/3: ",
+        "options" : ["A.3","B.5","C.4","D.6"],
+        "answer" : 'B'
+    }
+]
+
+score=0
+print("______________QUIZ_____________")
+for q in quiz_questions:
+    print(q["question"])
+    for op in q["options"]:
+        print(op)
+
+    user_answer=input("Enter a answer as (A/B/C/D): ").upper()
+
+    if user_answer==q["answer"]:
+        print("Correct answer")
+        score=score+1
+    else:
+        print("Wrong answer")
+
+print(f"Final score {score} out of {len(quiz_questions)}")
+
